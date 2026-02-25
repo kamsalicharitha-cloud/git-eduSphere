@@ -1,0 +1,71 @@
+{
+  "name": "Course",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Course title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Course description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "mathematics",
+        "science",
+        "language",
+        "technology",
+        "arts",
+        "history"
+      ],
+      "description": "Course category"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "default": "beginner"
+    },
+    "language": {
+      "type": "string",
+      "default": "English"
+    },
+    "duration_hours": {
+      "type": "number"
+    },
+    "thumbnail_url": {
+      "type": "string"
+    },
+    "lessons_count": {
+      "type": "number"
+    },
+    "enrolled_count": {
+      "type": "number",
+      "default": 0
+    },
+    "rating": {
+      "type": "number",
+      "default": 0
+    },
+    "has_subtitles": {
+      "type": "boolean",
+      "default": true
+    },
+    "has_audio_description": {
+      "type": "boolean",
+      "default": false
+    },
+    "instructor_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}
